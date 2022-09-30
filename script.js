@@ -1,21 +1,24 @@
  
-let textbox = document.querySelector("#textbox");
+const textbox = document.querySelector("#textbox");
 
-textbox.addEventListener("input", function(){
-	let text = this.value;
-	// counting characters
-	let char = text.length;
-	document.querySelector("#char").innerText = char;
+textbox.addEventListener("input", () =>{
+	let charWord = textbox.value; //user input
 
-	// removing starting and ending spaces..
-	   text = text.trim();
-	// counting words
-	let word = text.split(" ");
-	// removing between unneccesery spaces, due to counting wrods
-	let cleanArray = word.filter((value) =>{
-		return value != "";
+
+	charWord = charWord.trim(); //remove whitespaces
+
+	let charLen = charWord.length; //length of characters
+
+	document.querySelector("#charCount").innerHTML = charLen;
+
+
+	let words = charWord.split(" "); // convert input to array
+	
+	let strings = words.filter((val) =>{
+		return val;
 	})
-	document.querySelector("#word").innerText = cleanArray.length;
+	 document.querySelector("#wordCount").innerHTML = strings.length;	
+	
 
 	
 });
