@@ -12,12 +12,12 @@ textbox.addEventListener("input", () =>{
 	document.querySelector("#charCount").innerHTML = charLen;
 
 
-	let words = charWord.split(" "); // convert input to array
+	let wordsArr = charWord.split(" "); // convert words to array
 	
-	let strings = words.filter((val) =>{
+	let words = wordsArr.filter((val) =>{
 		return val;
 	})
-	 document.querySelector("#wordCount").innerHTML = strings.length;	
+	 document.querySelector("#wordCount").innerHTML = words.length;	
 	
 
 	
