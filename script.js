@@ -12,8 +12,8 @@ textbox.addEventListener("input", () =>{
 	document.querySelector("#charCount").innerHTML = charLen;
 
 
-	let wordsArr = charWord.split(" "); // convert words to array
-	
+	let wordsArr = charWord.split(""); // convert words to array
+	//Filter out the words
 	let words = wordsArr.filter((val) =>{
 		return val;
 	})
